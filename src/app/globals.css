@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Silver Editorial';
+  src: url('/fonts/SilverEditorial-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Silver Editorial';
+  src: url('/fonts/SilverEditorial-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bisoca';
+  src: url('/fonts/Bisoca-8OJmJ.ttf') format('truetype'),
+       url('/fonts/Bisoca.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg-main: #0A0A0A;
+  --bg-secondary: #101010;
+  --bg-elevated: #151515;
+  --text-primary: #F3F3F0;
+  --text-secondary: #A5A5A0;
+  --text-muted: #707070;
+  --border-color: #292929;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #0A0A0A;
+  color: var(--text-primary);
+  font-family: var(--font-dm-sans), 'DM Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #0A0A0A;
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom Editorial Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+::-webkit-scrollbar-thumb {
+  background: #292929;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #707070;
+}
+
+/* Accessibility Focus States */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 1px solid #C8C8C2;
+  outline-offset: 2px;
+}
+
+/* Typography Utility Classes */
+.font-editorial {
+  font-family: 'Silver Editorial', Georgia, Cambria, serif;
+}
+
+.font-editorial-italic {
+  font-family: 'Silver Editorial', Georgia, Cambria, serif;
+  font-style: italic;
+}
+
+.font-bisoca {
+  font-family: 'Bisoca', Georgia, serif;
+}
+
+/* Text Selection */
+::selection {
+  background-color: #292929;
+  color: #F3F3F0;
+}
+
+/* LIGHT MODE STYLING OVERRIDES */
+.light-mode {
+  color: #0A0A0A !important;
+}
+
+.light-mode h1,
+.light-mode h2,
+.light-mode h3,
+.light-mode h4,
+.light-mode p,
+.light-mode span,
+.light-mode a,
+.light-mode label,
+.light-mode div {
+  color: inherit;
+}
+
+.light-mode .text-\[\#F3F3F0\],
+.light-mode .text-\[\#A5A5A0\],
+.light-mode .text-\[\#C8C8C2\] {
+  color: #0A0A0A !important;
+}
+
+.light-mode .text-\[\#707070\] {
+  color: #333333 !important;
+}
+
+.light-mode .bg-\[\#0A0A0A\] {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.light-mode .bg-\[\#101010\] {
+  background-color: rgba(245, 245, 243, 0.95) !important;
+}
+
+.light-mode .bg-\[\#151515\] {
+  background-color: rgba(235, 235, 230, 0.95) !important;
+}
+
+.light-mode .border-\[\#292929\],
+.light-mode .border-\[\#151515\] {
+  border-color: #CCCCCC !important;
+}
+
+.light-mode .bg-\[\#F3F3F0\] {
+  background-color: #0A0A0A !important;
+  color: #FFFFFF !important;
+}
+
+.light-mode input,
+.light-mode textarea {
+  background-color: #FFFFFF !important;
+  color: #0A0A0A !important;
+  border-color: #CCCCCC !important;
+}
+
+.light-mode footer {
+  background-color: rgba(230, 230, 225, 0.95) !important;
+  color: #0A0A0A !important;
+}
